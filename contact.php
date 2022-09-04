@@ -40,7 +40,7 @@ $selected = "contact";
           <input class="contact-form-input form-control" type="email" placeholder="Email" name="Email">
           <input class="contact-form-input form-control" type="tel" placeholder="Phone Number" name="Number">
           <input class="contact-form-input form-control message" type="text" placeholder="Message..." name="Message">
-          <div class="contact-form-button btn btn-outline-info text-nowrap" role="button">Send Message</div>
+          <button class="contact-form-button btn btn-outline-info text-nowrap" >Send Message</button>
 
         </form>
 
