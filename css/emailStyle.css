@@ -12,6 +12,7 @@ body{
   font-family: 'Overpass', sans-serif !important;
   background-color: linear-gradient(#f7f7f7, #ffffff);
   position: relative;
+
 }
 
 .header{
@@ -111,7 +112,21 @@ body{
   flex-direction: row;
   justify-content: space-around;
   align-content: space-around;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
 }
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+  }
+
+  .twitter::before{
+    font: var(--fa-font-brands);
+    content: "\f007";
+  }
 
 .social-media i{
   color: black;
