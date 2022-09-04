@@ -5,35 +5,35 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php';
 
-$mail = new PHPMailer();
+$userMail = new PHPMailer();
 
 $message = include 'emailContent.html';;
 $email = $_POST['Email'];
 
-$mail->isSMTP();
+$userMail->isSMTP();
 
-$mail->SMTPAuth   = true;
-$mail->Host = 'cameronscholes.com';
-$mail->Port = 587;
-$mail->Username = "no-reply@cameronscholes.com";
-$mail->Password = "Selby2017!";
+$userMail->SMTPAuth   = true;
+$userMail->Host = 'cameronscholes.com';
+$userMail->Port = 587;
+$userMail->Username = "no-reply@cameronscholes.com";
+$userMail->Password = "Selby2017!";
 
-$mail->SetFrom("no-reply@cameronscholes.com", "Cameron Scholes");
-$mail->addAddress($email);
+$userMail->SetFrom("no-reply@cameronscholes.com", "Cameron Scholes");
+$userMail->addAddress($email);
 
-$mail->Subject = "New Enquiry";
-$mail->isHTML = true;
-$mail->Body = $message;
-$mail->AltBody = $message;
+$userMail->Subject = "New Enquiry";
+$userMail->isHTML = true;
+$userMail->Body = $message;
+$userMail->AltBody = $message;
 
-$mail->send();
-
-
+$userMail->send();
 
 
 
-if(!$mail->Send()) {
-  echo "Mailer Error: " . $mail->ErrorInfo;
+
+
+if(!$userMail->Send()) {
+  echo "Mailer Error: " . $userMail->ErrorInfo;
 } else {
   header('location: ../contact.php');
 
