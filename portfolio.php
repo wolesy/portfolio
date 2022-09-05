@@ -28,9 +28,9 @@ $selected = "portfolio";
 
       <div class="main">
         <div class="portfolio-grid">
-          <div class="portfolio-web"><?php echo "web"; ?></div>
-          <div class="portfolio-design">design</div>
-          <div class="portfolio-art">Art</div>
+          <div class="portfolio web"><?php echo "web"; ?></div>
+          <div class="portfolio design">design</div>
+          <div class="portfolio art">Art</div>
         </div>
       </div>
 
