@@ -34,17 +34,17 @@ $selected = "contact";
         <p class="contact-text">Get in contact today for a quote and I can share my years of knowledge!</p>
 
       </div>
-
-      <form class="form shadow" action="include/contactForm.php" method="POST">
-        <h2 class="form-header">Get in contact</h2>
-        <h3 class="form-subheader text-muted">Lets discuss what you want!</h3>
-        <input class="contact-form-input form-control" type="text" placeholder="Name" name="Name">
-        <input class="contact-form-input form-control" type="email" placeholder="Email" name="Email">
-        <input class="contact-form-input form-control" type="tel" placeholder="Phone Number" name="Number">
-        <textarea class="form-control contact-form-input-message" type="text" placeholder="Message..." name="Message" rows="1"></textarea>
-        <button class="contact-form-button btn btn-outline-info text-nowrap contact-form-message" >Send Message</button>
-
-      </form>
+      <div class="form-container shadow">
+        <form class="form" action="include/contactForm.php" method="POST">
+          <h2 class="form-header">Get in contact</h2>
+          <h3 class="form-subheader text-muted">Lets discuss what you want!</h3>
+          <input class="contact-form-input form-control" type="text" placeholder="Name" name="Name">
+          <input class="contact-form-input form-control" type="email" placeholder="Email" name="Email">
+          <input class="contact-form-input form-control" type="tel" placeholder="Phone Number" name="Number">
+          <textarea class="form-control contact-form-input-message" type="text" placeholder="Message..." name="Message" rows="1"></textarea>
+          <button class="contact-form-button btn btn-outline-info text-nowrap" >Send Message</button>
+        </form>
+      </div>
     </main>
     <?php
     include "include/footer.php";
