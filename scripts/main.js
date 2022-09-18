@@ -25,3 +25,7 @@ function main3Timeout(){
   const main3 = document.getElementsByClassName('main-3')[0];
   main3.style.animationPlayState = "running"
 }
+
+function webClick(){
+  window.location.assign("web.php");
+}

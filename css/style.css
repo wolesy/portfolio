@@ -614,22 +614,28 @@ PORTFOLIO
   position: relative;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-rows: 1fr;
   grid-gap: 5%;
   width:90vw;
   left:5vw;
-  height:90vh;
+  height:25vw;
+  margin-top:30vh;
 }
 
 /*grid items*/
 .portfolio{
   text-align: center;
   vertical-align: middle;
+  border: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .web{
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .design{
@@ -638,8 +644,19 @@ PORTFOLIO
 }
 
 .art{
-  grid-column: 2;
-  grid-row: 3;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.portfolio-text{
+  position: relative;
+  vertical-align: middle;
+}
+
+.web-container{
+  width:90vw;
+  position: relative;
+  left:5vw;
 }
 
 /*********************************************
@@ -650,7 +667,36 @@ MISC.
   height:100px;
 }
 
+.breadcrumb{
+  position: relative;
+  bottom:10vh;
+  top:15vh;
+  left:5vw;
+}
 
+.carousel{
+  position: relative;
+  top:15vh;
+  width:90vw;
+  left:5vw;
+}
+
+.carousel::after{
+  position: absolute;
+  grid-area: body;
+  bottom: 0;
+  height: 100%;
+  width:100%;
+  content: "";
+  background: linear-gradient(to top,#f2f2f2,rgba(255,255,255, 0) 60%);
+  pointer-events: none;
+  left:0;
+}
+
+
+.carousel-caption{
+  z-index: 10;
+}
 
 /**************************************************************
 MEDIA - DYNAMIC LAYOUT
@@ -686,12 +732,26 @@ MEDIA - DYNAMIC LAYOUT
     border-bottom: 7vw solid transparent !important;
   }
 
-  .main-2{
-    grid-column-start: 2 !important;
+  .portfolio-grid{
+    height:25vw !important;
+    margin-top:30vh !important;
+    grid-template-rows: 1fr !important;
   }
 
-  .main-3{
-    grid-column-start: 3 !important;
+
+  .web{
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .design{
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  .art{
+    grid-column: 3 !important;
+    grid-row: 1 !important;
   }
 
   .contact-text-container{
@@ -921,6 +981,29 @@ MEDIA - DYNAMIC LAYOUT
 
   footer{
     margin-top:30vh;
+  }
+
+  .portfolio-grid{
+    grid-template-rows: repeat(3,1fr);
+    height:90vh;
+    margin-top:25vh;
+  }
+
+  .portfolio{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .web{
+    grid-row: 1;
+  }
+
+  .design{
+    grid-row: 2;
+  }
+
+  .art{
+    grid-row: 3;
   }
 }
 

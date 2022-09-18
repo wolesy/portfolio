@@ -21,16 +21,22 @@ $selected = "portfolio";
     <script type="text/javascript" src="scripts/main.js"></script>
   </head>
 
-  <body onload="mobileDeviceCheck();">
+  <body>
     <div class="background">
 
       <?php include "include/header.php" ?>
 
       <div class="main">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="portfolio.php">Portfolio</a></li>
+          </ol>
+        </nav>
         <div class="portfolio-grid">
-          <div class="portfolio web"><?php echo "web"; ?></div>
-          <div class="portfolio design">design</div>
-          <div class="portfolio art">Art</div>
+          <div class="portfolio web" role="button" onclick="webClick();"><h3 class="portfolio-text">Web</h3></div>
+          <div class="portfolio design"><h3 class="portfolio-text">Design</h3></div>
+          <div class="portfolio art"><h3 class="portfolio-text">Art</h3></div>
         </div>
       </div>
 
