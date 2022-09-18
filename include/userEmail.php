@@ -15,8 +15,8 @@ $userMail->isSMTP();
 $userMail->SMTPAuth   = true;
 $userMail->Host = 'cameronscholes.com';
 $userMail->Port = 587;
-$userMail->Username = "no-reply@cameronscholes.com";
-$userMail->Password = "Selby2017!";
+$userMail->Username = /*USERNAME*/;
+$userMail->Password = /*PASSWORD*/;
 
 $userMail->SetFrom("no-reply@cameronscholes.com", "Cameron Scholes");
 $userMail->addAddress($email);
