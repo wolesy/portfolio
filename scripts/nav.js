@@ -14,8 +14,6 @@ function navOpen() {
     for(let i = 0; i < navItem.length; i++){
     navItem[i].style.animation = 'menu-item-appear 0.5s 1';
 
-    console.log(navItem[i].style.animation);
-    console.log('animation');
   }
   for(let i = 0; i< navItemBorder.length; i++){
     navItemBorder[i].style.animation = 'nav-item-border 1s 1';
