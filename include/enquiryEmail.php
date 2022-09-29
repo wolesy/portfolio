@@ -21,8 +21,8 @@ $mail->isSMTP();
 $mail->SMTPAuth   = true;
 $mail->Host = 'cameronscholes.com';
 $mail->Port = 587;
-$mail->Username = "no-reply@cameronscholes.com";
-$mail->Password = "Selby2017!";
+$mail->Username = [USERNAME];
+$mail->Password = [PASSWORD];
 
 $mail->SetFrom("no-reply@cameronscholes.com", "Cameron Scholes");
 $mail->addAddress("hello@cameronscholes.com");
