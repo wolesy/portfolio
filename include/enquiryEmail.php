@@ -1,8 +1,4 @@
-<html>
-<head>
-<title>Testing Global and Local Variables</title>
-</head>
-<body>
+
 
 <?php
 
